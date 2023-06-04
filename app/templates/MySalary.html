@@ -1,0 +1,47 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+<div class="card shadow m-1">
+    <div class="card-body">
+        <a href="{% url 'Salary' %}" class="btn btn-primary float-right" style="font-family:Times New Roman;">Edite My salary</a>
+        <center><h3 class="p-2 text" style="font-family:Times New Roman;"><u>My Salary</u></h3></center>
+        <div class="table table-striped  table-primary" >
+            <h5 style="font-family:Times New Roman;"><u>ALLOWANCE TYPE</u></h4>
+            <h5 style="font-family:Times New Roman;">{{leavess.at}}</h5>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th style="font-family:Times New Roman;">Employee Name</th>
+                    <td style="font-family:Times New Roman;">{{request.user.first_name}} {{request.user.last_name}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">Basic Salary</th>
+                    <td style="font-family:Times New Roman;">{{leavess.bs}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">HRA</th>
+                    <td style="font-family:Times New Roman;">{{leavess.hra}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">PF</th>
+                    <td style="font-family:Times New Roman;">{{leavess.pf}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">OT</th>
+                    <td style="font-family:Times New Roman;">{{leavess.ot}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">ALLOWANCE Type</th>
+                    <td style="font-family:Times New Roman;">{{leavess.at}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">ALLOWANCE Amount</th>
+                    <td style="font-family:Times New Roman;">{{leavess.am}}</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+</div>
+
+{% endblock %}

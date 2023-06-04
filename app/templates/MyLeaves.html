@@ -1,0 +1,35 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+<div class="card shadow m-1">
+    <div class="card-body">
+        <a href="{% url 'EditMyLeaves' %}" class="btn btn-primary float-right" style="font-family:Times New Roman;">Edite My Leaves</a>
+        <center><h3 class="p-2 text" style="font-family:Times New Roman;"><u>My Leaves</u></h3></center>
+        <div class="table table-striped  table-primary" >
+            <h5 style="font-family:Times New Roman;"><u>Start Leaves To End Leave</u></h4>
+            <h5 style="font-family:Times New Roman;">{{leaves.fro}}<br>{{leaves.to}}</h5>
+        </div>
+        <div class="container-fluid">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th style="font-family:Times New Roman;">Select Leave Type</th>
+                    <td style="font-family:Times New Roman;">{{leaves.leaveType}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">From</th>
+                    <td style="font-family:Times New Roman;">{{leaves.fro}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">To</th>
+                    <td style="font-family:Times New Roman;">{{leaves.to}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">Description</th>
+                    <td style="font-family:Times New Roman;">{{leaves.description}}</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+
+<div class="card shadow m-1">
+    <div class="card-body">
+
+        <center><h3 class="p-2 text" style="font-family:Times New Roman;"><u>My Designation</u></h3></center>
+        <div class="container-fluid">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th style="font-family:Times New Roman;">Employee id</th>
+                    <td style="font-family:Times New Roman;">{{employee.empcode}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">Designation  Type</th>
+                    <td style="font-family:Times New Roman;">{{employee.designation}}</td>
+                </tr>
+            </table>  
+        </div>
+    </div>
+</div>
+
+{% endblock %}

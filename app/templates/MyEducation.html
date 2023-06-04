@@ -1,0 +1,93 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+
+<div class="card shadow m-1">
+    <div class="card-body">
+        <a href="{% url 'EditeMyEducation' %}" class="btn btn-primary float-right" style="font-family:Times New Roman;">Edite My Education Details</a>
+        <center><h3 class="p-2 text" style="font-family:Times New Roman;"><u>My Education Details</u></h3></center>
+
+        <div class="container-fluid">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th style="font-family:Times New Roman;">SSC Course Name</th>
+                    <td style="font-family:Times New Roman;">{{education.coursessc}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">SSC School/College</th>
+                    <td style="font-family:Times New Roman;">{{education.schoolclgssc}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Year Of Passing in SSC</th>
+                    <td style="font-family:Times New Roman;">{{education.yearofpassingssc}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">SSC Percentage</th>
+                    <td style="font-family:Times New Roman;">{{education.percentagessc}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">HSC Course Name</th>
+                    <td style="font-family:Times New Roman;">{{education.coursehsc}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">HSC School/College</th>
+                    <td style="font-family:Times New Roman;">{{education.schoolclghsc}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Year Of Passing in HSC</th>
+                    <td style="font-family:Times New Roman;">{{education.yearofpassinghsc}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">HSC Percentage</th>
+                    <td style="font-family:Times New Roman;">{{education.percentagehsc}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">Graduation Course Name</th>
+                    <td style="font-family:Times New Roman;">{{education.coursepggra}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Graduation School/College</th>
+                    <td style="font-family:Times New Roman;">{{education.schoolclggra}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Year Of Passing in Graduation</th>
+                    <td style="font-family:Times New Roman;">{{education.yearofpassingra}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Graduation Percentage</th>
+                    <td style="font-family:Times New Roman;">{{education.percentagegra}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">Post Graduation Course Name</th>
+                    <td style="font-family:Times New Roman;">{{education.coursepg}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Post Graduation School/College</th>
+                    <td style="font-family:Times New Roman;">{{education.schoolclgpg}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Year Of Passing in PG</th>
+                    <td style="font-family:Times New Roman;">{{education.yearofpassingpg}}</td>
+                </tr>
+                <tr>
+                    <th style="font-family:Times New Roman;">Post Graduation Percentage</th>
+                    <td style="font-family:Times New Roman;">{{education.percentagepg}}</td>
+                </tr>                
+            </table>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}

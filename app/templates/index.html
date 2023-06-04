@@ -1,0 +1,75 @@
+{% include 'header.html' %}
+
+{% block main %}
+{% load static %}
+<style>
+  .footer {
+     position: fixed;
+     left: 0;
+     bottom: 0;
+     width: 100%;
+     background-color: white;
+     color: black;
+     text-align: center;
+  }
+  hr {
+    border: none;
+    border-top: 1px dotted #f00;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 60%;
+  }
+</style>
+<body style="background-image: url({% static 'images/7.jpg' %})">
+<div class="jumbotron text-center" style="background-color: gainsboro;" >
+    <h1 style="font-family:Times New Roman;" >WELCOME YOUR'S HRMS <i class="fa fa-handshake"></i></h1>
+    <p style="font-family:Times New Roman;">"Success is not final, failure is not fatal: it is the courage to continue that counts.."</p>
+    <i class="fa fa-facebook-square"></i>
+  </div>
+  <u>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3><a href="{% url 'EmployeeJobDetails' %}" class="btn btn-primary" style="font-family:Times New Roman;">Job Requirements</a></h3>
+        <p style="font-family:Times New Roman; color:white; color:white;">"Choose a job you love, and you will never have to work a day in your life..."</p>
+        <p style="font-family:Times New Roman; color:white;">The most valuable of all talents is that of never using two words when one will do.."</p>
+      </div>
+      <div class="col-sm-4">
+        <h3><a href="{% url 'EmployeeJobForm' %}" class="btn btn-primary" style="font-family:Times New Roman;">Apply Job</a></h3>
+        <p style="font-family:Times New Roman; color:white;">"If you can DREAM it, you can DO it..."</p>
+        <p style="font-family:Times New Roman; color:white;">"New online formats gutted the newspaper-ad business. Why pore over tiny print looking for a job in the want ads when you can tap a few keywords into monster, then click through and apply"</p>
+      </div>
+      <div class="col-sm-4">
+        <h3><a href="{% url 'aboutus' %}" class="btn btn-primary" style="font-family:Times New Roman;">About us</a></h3>        
+        <p style="font-family:Times New Roman; color:white;">"If two equally qualified persons apply for a job at a workplace with few immigrants, the one called Mohammed should get the job"</p>
+        <p style="font-family:Times New Roman; color:white;">"I can't please everyone. That's not in my J.D., you know, not in my job description...."</p>
+      </div>
+    </div>
+  <u>
+  <hr style="font-family:Times New Roman; color:white;">
+    <!-- Footer -->
+<footer class="page-footer font-small blue">
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="font-family:Times New Roman; color:white;">© 2022 Copyright:
+    <a href="/">smarthr.dreamguystech.com</a><br>
+    <a style="color: blue;" href="https://www.facebook.com/profile.php?id=100069856389899" role="button"><i class="fab fa-facebook-f fa-lg"></i></a>
+
+<!-- Twitter -->
+<a style="color: #55acee;" href="https://twitter.com/HR_Solution_?t=9hBADH9h9kPPsJAbifNNug&s=09" role="button"><i class="fab fa-twitter fa-lg"></i></a>
+
+<!-- Google -->
+<a style="color: red;" href="http://127.0.0.1:8000/" role="button"><i class="fab fa-google fa-lg"></i></a>
+
+<!-- Instagram -->
+<a style="color: pink;" href="https://www.instagram.com/hr._.solution/?utm_medium=copy_link" role="button"><i class="fab fa-instagram fa-lg"></i></a>
+
+<!-- Whatsap -->
+<a style="color: darkred;" href="https://wa.me/message/5KZJSJUJTHIJB1" role="button"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</div>
+{% endblock%}

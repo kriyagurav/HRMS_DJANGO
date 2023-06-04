@@ -1,0 +1,45 @@
+{% load static %}
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<nav class="navbar navbar-expand-md bg-dark green navbar-dark green">
+  <a class="navbar-brand" href="" style="font-family:Times New Roman;">HRMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'index' %}" style="font-family:Times New Roman;"><i class="fa fa-home" ></i> Home</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" href="{% url 'EmployeeSignup' %}" style="font-family:Times New Roman;"><i class="fa fa-user-plus"></i>Employee Signup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'EmployeeLogin' %}" style="font-family:Times New Roman;"><i class="fa fa-users"></i> Employee Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'adminlogin' %}" style="font-family:Times New Roman;"><i class="fa fa-user-plus"></i> Admin Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hrlogin' %}" style="font-family:Times New Roman;"><i class="fa fa-user-plus"></i> HR Login</a>
+      </li> 
+    </ul>
+  </div>
+</div> 
+</nav>
+<br>
+</body>
+</html>
+
+

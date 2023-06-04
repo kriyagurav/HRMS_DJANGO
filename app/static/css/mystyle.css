@@ -1,0 +1,12 @@
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: rgb(165, 124, 11) !important;
+    background-color: silver
+}
+
+.nav-brand {
+    font-weight: bold
+}

@@ -1,0 +1,44 @@
+{% extends 'jobsidebase.html' %}
+
+{% block main %}
+{% load static %}
+
+<h3 class="text-secondry p-2 text-left" style="font-family:Times New Roman; border-bottom : 2px solid green">Careers List</h3>
+
+<div class="row text-center">
+    <div class="col-sm-12 p-2">
+        <div class="card shadow">
+            <div class="card-body">
+                <h3 class="text-secondry p-2 text-left" style="font-family:Times New Roman;"><i class="bi bi-bookmarks-fill"></i><u>  Junior React Developer</u></h3>
+                <p class="fw-bold fs-4 text-gray-600 mb-2 text-left" style="font-family:Times New Roman;"><i class="bi bi-dot"></i>First, a disclaimer – the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words as per minute and your writing skills are sharp.</p>
+                <h4><p class="text-left p-2" style="font-family:Times New Roman font;"><u>Requirements</u></p></h4>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with JavaScript.</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Good time-management skills.</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with React.</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with HTML / CSS</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with REST API</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Git knowledge is a plus</p>
+                <a href="{% url 'EmployeeJobForm' %}" class="btn btn-primary"  style="font-family:Times New Roman;">Apply Now</a>
+                <h3 class="text-secondry p-2 text-left" style="font-family:Times New Roman;"><i class="bi bi-bookmarks-fill"></i><u>  UI/UX Designer</u></h3>
+                <p class="fw-bold fs-4 text-gray-600 mb-2 text-left" style="font-family:Times New Roman;"><i class="bi bi-dot"></i>First, a disclaimer – the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words as per minute and your writing skills are sharp.</p>
+                <h4><p class="text-left p-2" style="font-family:Times New Roman font;"><u>Requirements</u></p></h4></i>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with JavaScript.</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Good time-management skills.</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with React</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with HTML / CSS</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Experience with REST API</p>
+                <p class="text-left p-2" style="font-family:Times New Roman font;"><i class="bi bi-dash"></i>Git knowledge is a plus</p>
+                <a href="{% url 'EmployeeJobForm' %}" class="btn btn-primary"  style="font-family:Times New Roman;">Apply Now</a>
+                <div class="card-body">
+                    <div class="mb-7">
+                        <h2 class="fs-1 text-gray-800 w-bolder mb-6" style="font-family:Times New Roman;"><u>About Us</u></h2>
+                        <p class="fw-bold fs-6 text-gray-600" style="font-family:Times New Roman;">First, a disclaimer – the entire process of writing a blog post often takes more than a couple of hours, even if you can type eighty words as per minute and your writing skills are sharp.</p>
+                    </div>
+                </div>
+                <a href="{% url 'index' %}" class="btn btn-primary px-3" style="font-family:Times New Roman;">HOME</a>
+               
+            </div>
+        </div>   
+    </div>
+</div>
+{% endblock%}

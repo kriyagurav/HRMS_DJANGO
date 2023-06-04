@@ -1,0 +1,24 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+{% load static %}
+
+<h3 class="text-secondry p-2" style="font-family:Times New Roman; border-bottom : 2px solid green">Employee Dashboard</h3>
+
+<div class="row text-center">
+    <div class="col-sm-12 p-2">
+        <div class="card shadow">
+            <div class="card-body">
+                <marquee behavior="alternate"><h3 class="text-success" style="font-family:Times New Roman;">Welcome Back To HRMS</h3></marquee>
+                <hr>
+                <h2 class="text-capitalize text-info bg-white" style="font-family:Times New Roman;"><b>{{request.user.first_name}} {{request.user.last_name}}</h2></b>
+                <a href="{% url 'MyProfile' %}" class="btn btn-primary" style="font-family:Times New Roman;">See profile</a>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+
+{% endblock%}

@@ -1,0 +1,92 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+
+<div class="card shadow m-1">
+    <div class="card-body">
+        <a href="{% url 'EditeMyExperience' %}" class="btn btn-primary float-right" style="font-family:Times New Roman;">Edite My Experience</a>
+        <center><h3 class="p-2 text" style="font-family:Times New Roman;"><u>My Work Experience</u></h3></center>
+
+        <div class="container-fluid">
+            <table class="table table-striped table-bordered">
+                <tr>
+                    <th style="font-family:Times New Roman;">First Company Name</th>
+                    <td style="font-family:Times New Roman;">{{experience.company1name}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">First Job Designation</th>
+                    <td style="font-family:Times New Roman;">{{experience.company1design}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">First Job Salary</th>
+                    <td style="font-family:Times New Roman;">{{experience.company1salary}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">First Job Duration From</th>
+                    <td style="font-family:Times New Roman;">{{experience.company1duration}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">First Job Duration To</th>
+                    <td style="font-family:Times New Roman;">{{experience.company1durationto}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Second Company Name</th>
+                    <td style="font-family:Times New Roman;">{{experience.company2name}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Second Job Designation</th>
+                    <td style="font-family:Times New Roman;">{{experience.company2design}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Second Job Salary</th>
+                    <td style="font-family:Times New Roman;">{{experience.company2salary}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Second Job Duration From</th>
+                    <td style="font-family:Times New Roman;">{{experience.company2duration}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Second Job Duration To</th>
+                    <td style="font-family:Times New Roman;">{{experience.company2durationto}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Third Company Name</th>
+                    <td style="font-family:Times New Roman;">{{experience.company3name}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Third Job Designation</th>
+                    <td style="font-family:Times New Roman;">{{experience.company3design}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Third Job Salary</th>
+                    <td style="font-family:Times New Roman;">{{experience.company3salary}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Third Job Duration From</th>
+                    <td style="font-family:Times New Roman;">{{experience.company3duration}}</td>
+                </tr>
+
+                <tr>
+                    <th style="font-family:Times New Roman;">Third Job Duration To</th>
+                    <td style="font-family:Times New Roman;">{{experience.company3durationto}}</td>
+                </tr>
+            </table>
+        
+        </div>
+    </div>
+</div>
+
+{% endblock %}

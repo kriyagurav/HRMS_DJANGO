@@ -1,0 +1,48 @@
+{% include 'header.html' %}
+{% load static%}
+
+<body style="background-image: url({% static 'images/7.jpg' %})">
+<div class="card shadow m-5">
+    <div class="card-body">
+        
+       <center><h2 class="p-2 text" style="font-family:Times New Roman; border-bottom: 2px solid orange">Employee Login</h2></center>
+
+        <div class="container-fluid">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Email ID</label>
+                            <input type="email" name="emailid" class="form-control" placeholder="Enter Email id" style="font-family:Times New Roman;" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter password "   style="font-family:Times New Roman;" required>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input type="submit" value="Login" class="m-2 px-3 btn btn-primary" style="font-family:Times New Roman;">
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Login successfully');
+    window.location = ('{% url 'EmployeeHome' %}');
+</script>
+{% endif %}
+{% if error == "yes" %}
+<script>
+    alert('Invalid Login Credentials, try Again...');
+   
+</script>
+{% endif %}

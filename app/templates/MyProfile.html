@@ -1,0 +1,119 @@
+{% extends 'Employeesidebase.html' %}
+
+{% block main %}
+{% load static %}
+
+<div class="card shadow m-1">
+    <div class="card-body" style="background-color: url({% static 'images/.jpg' %})">
+        
+        <center><h2 class="p-2 text" style="font-family:Times New Roman;"><u>My Profile</u></h2></center>
+
+        <div class="container-fluid">
+            <form method="post">
+                {% csrf_token %}
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="{% static 'images/HR 123.png' %}" class="card-img" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body" >
+                          <h4 class="card-title" style="font-family:Times New Roman;">{{request.user.first_name}} {{request.user.last_name}}</h4>
+                          <p class="card-text" style="font-family:Times New Roman;">Employee Code </br> {{employee.empcode}} </p>
+                          <p class="card-text" style="font-family:Times New Roman;">Joining Date</br> {{employee.joiningdate}}</p>
+                          <p class="card-text" style="font-family:Times New Roman;">Email ID</br> {{employee.user.username}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">First Name</label>
+                            <input type="text" name="firstname" class="form-control" placeholder="Enter First Name" style="font-family:Times New Roman;" pattern="[A-Za-z]+" value="{{employee.user.first_name}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Last Name</label>
+                            <input type="text" name="lastname" class="form-control" placeholder="Enter Last Name" pattern="[A-Za-z]+" style="font-family:Times New Roman;" value="{{employee.user.last_name}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Employee Code</label>
+                            <input type="text" name="empCode" class="form-control" placeholder="Enter your Employee Code" pattern="[0-9]+" style="font-family:Times New Roman;" value="{{employee.empcode}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Employee Department</label>
+                            <input type="text" name="department" class="form-control" placeholder="Department" style="font-family:Times New Roman;" value="{{employee.empdept}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Employee Designation</label>
+                            <input type="text" name="designation" class="form-control" placeholder="Designation" style="font-family:Times New Roman;" value="{{employee.designation}}" required>
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Contact</label>
+                            <input type="text" name="contact" class="form-control" placeholder="Enter your Contact" style="font-family:Times New Roman;" value="{{employee.contact}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Email ID</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter your email ID" style="font-family:Times New Roman;" value="{{employee.user.username}}" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Joining Date [{{employee.joiningdate}}]</label>
+                            <input type="date" name="jdate" class="form-control" style="font-family:Times New Roman;" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label style="font-family:Times New Roman;">Gender [{{employee.gender}}]</label>
+                            <select name="gender" class="form-control" style="font-family:Times New Roman;" required>
+                                <option value="None" style="font-family:Times New Roman;">Select Gender</option>
+                                <option value="Male" style="font-family:Times New Roman;">Male</option>
+                                <option value="Female" style="font-family:Times New Roman;">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <input type="submit" value="Submit" class="m-2 px-3 btn btn-primary" style="font-family:Times New Roman;">
+            </form>
+
+        </div>
+    </div>
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Profile Updated successfully');
+    window.location = ('{% url 'MyProfile' %}');
+</script>
+{% endif %}
+{% if error == "yes" %}
+<script>
+    alert('Something Went Wrong, try Again...');
+   
+</script>
+{% endif %}
+
+{% endblock %}
